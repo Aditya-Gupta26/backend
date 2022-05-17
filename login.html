@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+    #save {
+      visibility: "hidden";
+  }
+  </style>
+   <link rel="stylesheet" type="text/css" href="style4.css">
+  </head>
+  <body>
+    <div class = "div1">
+      <img src = "github.webp">
+      <h4>Github App</h4>
+    </div>
+    <div class = "div2">
+    <h2>Click here to Login using GitHub</h2>
+      
+      
+      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=e6181d75a38d1659e72a"><INPUT TYPE="BUTTON" VALUE="Authorize GitHub" class="styled-button-2" id="auth"></a>
+      
+        <form method="POST" action="http://localhost:3000/user/createrepo">
+          <button type = "submit" id = "save" style="visibility: hidden;" class="styled-button-2" >Create Repository</button>
+        </form>
+    
+  </div>
+    <script>
+    var edit = document.getElementById("auth");
+      var save = document.getElementById("save");
+      
+      auth.onclick = function() {
+          save.style.visibility = "visible";
+      
+      }
+
+      </script>
+<div class = "div3">
+  <p><br><br>This app is put in place to smoothen your GitHub experiance. <br><br><br><br> On Clicking "Authorize GitHub", you will be redirected to login and henceforth, authorize us to your GitHub account. <br><br><br><br> On a successful Authorization, you will see a create repository button, on clicking that, a new repository, by the name of Sample_Repo will automatically be created.</p>
+</div>
+    
+  </body>
+</html>
